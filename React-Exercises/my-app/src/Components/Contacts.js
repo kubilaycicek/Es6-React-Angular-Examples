@@ -1,0 +1,20 @@
+ 
+import React from 'react';
+import List from './List';
+import Form from './Form';
+
+import PropTypes from 'prop-types';
+//Stateless Component State yok
+const Contacts= props=> {
+		return (
+			<div>
+				<List contacts={props.contacts}/>
+				<Form addContact={props.addContact}  />
+			</div>
+		);
+};
+Contacts.propTypes={
+	contacts:PropTypes.array.isRequired,
+	addContact:PropTypes.func
+}
+export default Contacts;
